@@ -1,5 +1,6 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="col-md-12">
+<div id="users">
 <p>Challenge a friend to a game!</p>
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="user in users">
@@ -8,4 +9,8 @@
         <a ng-click="challenge(user)" class="user"><span class="glyphicon glyphicon-user pull-right"></span></a>
     </li>
   </ul>
+</div>
+
+  <a ui-sref='.select' class='btn btn-primary'>Select</a>
+  <div ui-view></div>
 </div>

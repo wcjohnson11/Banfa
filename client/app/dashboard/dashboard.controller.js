@@ -6,9 +6,13 @@ angular.module('banfaApp')
     $http.get('/api/users').success(function(users) {
       $scope.users = users;
     });
+    $scope.enemy= $scope.enemy || false;
+    $scope.playing = false;
+
     $scope.challenge = function(user) {
-      console.log('challenge', user);
-      $state.go('match');
+      $scope.enemy = user;
+      console.log($scope.enemy);
+      // $state.go('match');
     };
 /*  Set up to be challenge instead of delete
     $scope.delete = function(user) {

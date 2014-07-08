@@ -18,6 +18,11 @@ angular.module('banfaApp')
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'DashboardCtrl'
       })
+      .state('dashboard.select', {
+        url: '/select',
+        templateUrl: 'app/select/select.html',
+        controller: 'SelectCtrl'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
