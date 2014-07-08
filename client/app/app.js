@@ -6,6 +6,7 @@ angular.module('banfaApp', [
   'ngSanitize',
   'ui.bootstrap',
   'btford.socket-io',
+  'banfaApp.select',
   'ui.router'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {

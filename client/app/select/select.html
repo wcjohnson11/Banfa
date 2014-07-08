@@ -1,3 +1,10 @@
 <div class="col-md-12">
-This is the select view.
+<p>...and Category!</p.
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="category in categorys">
+        <strong>{{category.name}}</strong><br>
+        <span class="text-muted">{{category.info}}</span>
+        <a ng-click="play(category)" class="user"><span class="glyphicon glyphicon-plus-sign pull-right"></span></a>
+    </li>
+  </ul>
 </div>

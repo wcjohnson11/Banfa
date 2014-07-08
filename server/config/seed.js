@@ -7,6 +7,8 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Card = require('../api/card/card.model');
+var Category = require('../api/category/category.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -44,6 +46,35 @@ User.find({}).remove(function() {
     password: 'admin'
   }, function() {
       console.log('finished populating users');
+    }
+  );
+});
+
+Card.find({}).remove(function() {
+  Card.create({
+    hanzi: '中国',
+    pinyin: 'Zhōng guó',
+    info: 'Countries',
+    translation: 'China'
+  }, {
+    hanzi: '德国',
+    pinyin: 'Dé guó',
+    info: 'Countries',
+    translation: 'Germany'
+  }, function() {
+      console.log('finished populating cards');
+    }
+  );
+});
+Category.find({}).remove(function() {
+  Category.create({
+    name : 'Countries',
+    info : 'A set of country names'
+  }, {
+    name : 'Food!',
+    info : 'Some of my favorite types of food, chinese and not'
+  }, function() {
+      console.log('finished populating categories');
     }
   );
 });

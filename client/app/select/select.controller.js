@@ -1,6 +1,16 @@
 'use strict';
 
-angular.module('banfaApp')
-  .controller('SelectCtrl', function ($scope, $http, $state) {
+angular.module('banfaApp.select', [])
+  .controller('SelectCtrl', function ($scope, $http, $stateParams, $state) {
+    $http.get('/api/categorys').success(function(categorys) {
+      $scope.categorys = categorys;
+      // console.log($scope.categorys[0].name);
+    });
+    $scope.play = function(category) {
+      $scope.category = category;
 
+      var catname = $scope.category.name;
+      var userid = $stateParams;
+      $state.go('match', {id: userid, catid: catname});
+    };
   });
