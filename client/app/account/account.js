@@ -24,12 +24,12 @@ angular.module('banfaApp')
         controller: 'DashboardCtrl'
       })
       .state('select', {
-        url: '/:id',
+        url: '/select/:id',
         templateUrl: 'app/select/select.html',
         controller: 'SelectCtrl'
       })
       .state('match', {
-        url: '/:catid',
+        url: '/match',
         templateUrl: 'app/match/match.html',
         controller: 'MatchCtrl'
       })

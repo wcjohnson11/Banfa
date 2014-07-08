@@ -4,7 +4,6 @@ angular.module('banfaApp.select', [])
   .controller('SelectCtrl', function ($scope, $http, $stateParams, $state) {
     $http.get('/api/categorys').success(function(categorys) {
       $scope.categorys = categorys;
-      // console.log($scope.categorys[0].name);
     });
     $scope.play = function(category) {
       $scope.category = category;
