@@ -19,9 +19,14 @@ angular.module('banfaApp')
         controller: 'DashboardCtrl'
       })
       .state('dashboard.select', {
-        url: '/select',
+        url: '/:id',
         templateUrl: 'app/select/select.html',
         controller: 'SelectCtrl'
+      })
+      .state('match', {
+        url: '/match',
+        templateUrl: 'app/match/match.html',
+        controller: 'MatchCtrl'
       })
       .state('settings', {
         url: '/settings',

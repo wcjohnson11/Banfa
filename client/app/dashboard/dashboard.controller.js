@@ -1,27 +1,32 @@
 'use strict';
 
 angular.module('banfaApp')
+  .service('dashboardService', function () {
+    return {
+      opponent: function() {
+
+      }
+    };
+  })
+  //$stateParams $stateParams.id
   .controller('DashboardCtrl', function ($scope, $state, $http) {
 
     $http.get('/api/users').success(function(users) {
       $scope.users = users;
     });
-    $scope.enemy= $scope.enemy || false;
+    $scope.opponent= $scope.opponent || false;
+    $scope.category = $scope.category || false;
     $scope.playing = false;
 
     $scope.challenge = function(user) {
-      $scope.enemy = user;
-      console.log($scope.enemy);
+      $scope.opponent = user;
+      // $('#users').hide();
+      //this is routing to select with both opponent and category, probably will need to 
+      //be opponent._id
+      $state.go('.select', { opponent: $scope.opponent, category: $scope.category});
+      //dashboard/user.id
       // $state.go('match');
     };
-/*  Set up to be challenge instead of delete
-    $scope.delete = function(user) {
-      User.remove({ id: user._id });
-      angular.forEach($scope.users, function(u, i) {
-        if (u === user) {
-          $scope.users.splice(i, 1);
-        }
-      });
-    };
+/* on opponent and category -> route to /Match
     */
   });
