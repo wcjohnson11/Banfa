@@ -7,7 +7,7 @@ angular.module('banfaApp')
       $scope.users = users;
     });
     $scope.challenge = function(user) {
-	  console.log('challenge', user);
+      console.log('challenge', user);
     };
 /*  Set up to be challenge instead of delete
     $scope.delete = function(user) {
