@@ -23,7 +23,7 @@ angular.module('banfaApp')
         templateUrl: 'app/select/select.html',
         controller: 'SelectCtrl'
       })
-      .state('match', {
+      .state('dashboard.match', {
         url: '/match',
         templateUrl: 'app/match/match.html',
         controller: 'MatchCtrl'

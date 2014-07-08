@@ -20,10 +20,12 @@ angular.module('banfaApp')
 
     $scope.challenge = function(user) {
       $scope.opponent = user;
+
+      var userid = $scope.opponent._id;
       // $('#users').hide();
       //this is routing to select with both opponent and category, probably will need to 
-      //be opponent._id
-      $state.go('.select', { opponent: $scope.opponent, category: $scope.category});
+      console.log($scope.opponent);
+      $state.go('dashboard.select', {id: userid});
       //dashboard/user.id
       // $state.go('match');
     };
