@@ -56,6 +56,21 @@ Card.find({}).remove(function() {
     pinyin: 'Zhōng guó',
     info: 'Countries',
     translation: 'China'
+  },{
+    hanzi: '美国',
+    pinyin: 'Měi guó',
+    info: 'Countries',
+    translation: 'America'
+  },{
+    hanzi: '马里',
+    pinyin: 'Mǎ lǐ',
+    info: 'Countries',
+    translation: 'Mali'
+  },{
+    hanzi: '日本',
+    pinyin: 'Rì běn',
+    info: 'Countries',
+    translation: 'Japan'
   }, {
     hanzi: '德国',
     pinyin: 'Dé guó',

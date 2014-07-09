@@ -1,0 +1,20 @@
+<div class="col-md-12">
+<p>Congrats on completing your first game!</p.
+<ul class="list-group">
+	<p><strong>Aced!</strong></p>
+    <li class="list-group-item" ng-repeat="item in right">
+        <strong>{{item.hanzi}}</strong><br>
+        <span class="text-muted">{{item.pinyin}} - {{item.translation}}</span>
+        <a ng-click="play(category)" class="user"><span class="glyphicon glyphicon-plus-sign pull-right"></span></a>
+    </li>
+  </ul>
+ <ul class="list-group">
+ 	<p><strong>Needs some work...</strong></p>
+    <li class="list-group-item" ng-repeat="item in wrong">
+        <strong>{{item.hanzi}}</strong><br>
+        <span class="text-muted">{{item.pinyin}} - {{item.translation}}</span>
+        <a ng-click="play(category)" class="user"><span class="glyphicon glyphicon-plus-sign pull-right"></span></a>
+    </li>
+  </ul>
+
+</div>

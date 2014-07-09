@@ -1,5 +1,5 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-<div class="col-md-12">
+<div class="col-md-12" ng-if="!done">
 <p>...and Category!</p.
 <ul class="list-group">
     <li class="list-group-item">
@@ -7,6 +7,7 @@
         <span class="text-muted">{{cards[counter].pinyin}}</span>
     </li>
   </ul>
-<button ng-click="next(counter)" class="next">知道了!</button>
-<button ng-click="next(counter)" class="next">不知道!</button>
+<button ng-click="haonext(counter)" class="next">知道了!</button>
+<button ng-click="bunext(counter)" class="next">不知道!</button>
 </div>
+<div ui-view></div>

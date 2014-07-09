@@ -33,6 +33,11 @@ angular.module('banfaApp')
         templateUrl: 'app/match/match.html',
         controller: 'MatchCtrl'
       })
+      .state('match.review', {
+        url: '/review',
+        templateUrl: 'app/review/review.html',
+        controller: 'ReviewCtrl'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
